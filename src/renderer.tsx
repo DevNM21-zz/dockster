@@ -27,5 +27,10 @@
  */
 
 import './index.css';
+import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 
+ReactDOM.render(<App />, document.getElementById('root'));
 console.log('👋 This message is being logged by "renderer.js", included via webpack');
