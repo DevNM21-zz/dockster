@@ -17,3 +17,6 @@ Dockster is written in Typescript with React.
  - [ ] Move containers from one to other network
  - [ ] Delete Networks
  - [ ] Delete Images
+ - [ ] Create Volumes
+ - [ ] Attatch Volumes
+ - [ ] Destroy Volumes
