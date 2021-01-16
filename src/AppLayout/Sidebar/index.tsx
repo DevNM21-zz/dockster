@@ -12,7 +12,7 @@ const Index = (): JSX.Element => {
   return (
     <>
       <Wrapper>
-        <ProSidebar>
+        <ProSidebar width={'270px'} >
           <SidebarHeader>
             Dockster
           </SidebarHeader>
