@@ -1,6 +1,6 @@
 # Dockster - GUI to manage docker conatiners
 
-Dockster is an electronjs application to maintain docker images, containers and networks.
+Dockster is an electronjs application to maintain docker images, containers, volumes and networks through a project-based approach. 
 It's being built with performance and intuitive user interface as goals.
 
 Dockster is written in Typescript with React.
