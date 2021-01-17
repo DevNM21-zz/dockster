@@ -8,9 +8,7 @@ const Index = () => {
       <Container style={{ paddingTop: '40%' }} className={'justify-content-center text-center'}>
         <h4>It looks so empty!</h4>
         <p>Let&apos;s start by adding a project.</p>
-        <Button variant={'dark'}>
-          Add Project +
-        </Button>
+        <Button variant={'dark'}>Add Project +</Button>
       </Container>
     </>
   );
