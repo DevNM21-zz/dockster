@@ -5,18 +5,26 @@ It's being built with performance and intuitive user interface as goals.
 
 Dockster is written in Typescript with React.
 
+## Concepts
+
+### Project
+A project can be used to group containers, networks and volumes. Images are global.
+
 ## Roadmap
 
+ - [ ] Create Projects
+ - [ ] Edit Project Details
+ - [ ] Delete Project
  - [ ] A place to search for docker images
  - [ ] To pull images
  - [ ] Create containers from images with options
  - [ ] Read logs of a container
  - [ ] Stop, or Delete Containers
- - [ ] Attatch shell to containers
+ - [ ] Attach shell to containers
  - [ ] Create Docker networks
  - [ ] Move containers from one to other network
  - [ ] Delete Networks
  - [ ] Delete Images
  - [ ] Create Volumes
- - [ ] Attatch Volumes
+ - [ ] Attach Volumes
  - [ ] Destroy Volumes
