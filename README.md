@@ -15,6 +15,9 @@ A project can be used to group containers, networks and volumes. Images are glob
  - [ ] Create Projects
  - [ ] Edit Project Details
  - [ ] Delete Project
+ - [ ] Ability to create an account with email and password
+ - [ ] Login
+ - [ ] Sync Projects with user account
  - [ ] A place to search for docker images
  - [ ] To pull images
  - [ ] Create containers from images with options
