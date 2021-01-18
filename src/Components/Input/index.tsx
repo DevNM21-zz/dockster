@@ -12,8 +12,9 @@ interface Props {
   onChange: any;
   onBlur: any;
   value: any;
-  placeholder?: string;
   type: '';
+  placeholder?: string;
+  className?: string;
 }
 
 const Input = (props: Props): JSX.Element => (
