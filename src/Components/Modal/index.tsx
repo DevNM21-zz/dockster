@@ -9,7 +9,7 @@ interface props {
   title: string;
   children: ReactChild | ReactFragment | ReactPortal | null;
   toggleModal: () => void;
-  show: false;
+  show: boolean;
   onClose?: () => void;
   onOpen?: () => void;
 }
