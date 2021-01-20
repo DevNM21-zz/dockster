@@ -31,3 +31,9 @@ A project can be used to group containers, networks and volumes. Images are glob
  - [ ] Create Volumes
  - [ ] Attach Volumes
  - [ ] Destroy Volumes
+
+## Weekly Releases - Jan '20
+
+### Week 3 and 4 - Alpha 1.1:
+First 6 milestones of roadmap
+    
