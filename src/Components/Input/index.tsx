@@ -12,7 +12,7 @@ interface Props {
   onChange: any;
   onBlur: any;
   value: any;
-  type: '';
+  type?: string;
   placeholder?: string;
   className?: string;
 }

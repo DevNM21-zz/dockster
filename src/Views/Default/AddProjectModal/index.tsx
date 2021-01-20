@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../../Components/Modal';
+import Form from './Form';
 
 interface props {
   show: boolean;
@@ -10,7 +11,7 @@ const Index = ({ show, toggle }: props): JSX.Element => {
   return (
     <div>
       <Modal title={'Add your Project'} toggleModal={toggle} show={show}>
-        <h1>Add a project</h1>
+        <Form />
       </Modal>
     </div>
   );
