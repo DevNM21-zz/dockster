@@ -102,6 +102,7 @@
     "react-pro-sidebar": "^0.5.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "yup": "^0.32.8"
   }
 }
