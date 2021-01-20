@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Modal from '../../Components/Modal';
+import Modal from '../../../Components/Modal';
 
 interface props {
   show: boolean;
   toggle: () => void;
 }
 
-const AddProjectModal = ({ show, toggle }: props): JSX.Element => {
+const Index = ({ show, toggle }: props): JSX.Element => {
   return (
     <div>
       <Modal title={'Add your Project'} toggleModal={toggle} show={show}>
@@ -16,4 +16,4 @@ const AddProjectModal = ({ show, toggle }: props): JSX.Element => {
   );
 };
 
-export default AddProjectModal;
+export default Index;

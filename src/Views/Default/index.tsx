@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import AddProjectModal from './AddProjectModal';
+import Index from './AddProjectModal';
 
 const Index = (): JSX.Element => {
   const [showAddProjectModal, setAddProjectModalStatus] = useState(false);
@@ -16,7 +16,7 @@ const Index = (): JSX.Element => {
           Add Project +
         </Button>
       </Container>
-      <AddProjectModal show={showAddProjectModal} toggle={toggleModal} />
+      <Index show={showAddProjectModal} toggle={toggleModal} />
     </>
   );
 };
