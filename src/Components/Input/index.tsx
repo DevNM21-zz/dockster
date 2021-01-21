@@ -17,23 +17,29 @@ interface Props {
   className?: string;
 }
 
-const Input = (props: Props): JSX.Element => (
-  <Col md={props.gridSize || 12}>
-    <FormGroup>
-      <Form.Label>
-        {props.required ? (
-          <>
-            <span className="text-danger"> * </span>{' '}
-          </>
-        ) : (
-          ''
-        )}
-        {props.label}
-      </Form.Label>
-      <Form.Control {...props} />
-      <span className="text-danger"> {props.error} </span>{' '}
-    </FormGroup>
-  </Col>
-);
+const Input = (props: Props): JSX.Element => {
+  const inputProps = { ...props };
+  delete inputProps.gridSize;
+  delete inputProps.label;
+  delete inputProps.error;
+  return (
+    <Col md={props.gridSize || 12}>
+      <FormGroup>
+        <Form.Label>
+          {props.required ? (
+            <>
+              <span className="text-danger"> * </span>{' '}
+            </>
+          ) : (
+            ''
+          )}
+          {props.label}
+        </Form.Label>
+        <Form.Control {...inputProps} />
+        <span className="text-danger"> {props.error} </span>{' '}
+      </FormGroup>
+    </Col>
+  );
+};
 
 export default Input;

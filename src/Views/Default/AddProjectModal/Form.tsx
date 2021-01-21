@@ -4,7 +4,8 @@ import * as Yup from 'yup';
 import BootstrapForm from 'react-bootstrap/Form';
 import Input from '../../../Components/Input';
 import {Button} from "react-bootstrap";
-
+import FormGroup from "react-bootstrap/esm/FormGroup";
+import FormB from 'react-bootstrap/Form';
 const Form = () => {
   const formik = useFormik({
     initialValues: {
@@ -27,23 +28,21 @@ const Form = () => {
           gridSize={12}
           required={true}
           label={'Project Name'}
-          name={'Name'}
+          name={'name'}
           error={formik.errors.name}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.name}
-          type={'text'}
         />
         <Input
           gridSize={12}
           required={false}
           label={'Project Description'}
-          name={'Description'}
+          name={'description'}
           error={formik.errors.description}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.description}
-          type={'text'}
         />
         <Button type={'submit'}>Create Project</Button>
       </BootstrapForm>
