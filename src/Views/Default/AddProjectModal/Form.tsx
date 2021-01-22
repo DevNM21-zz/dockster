@@ -3,10 +3,14 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import BootstrapForm from 'react-bootstrap/Form';
 import Input from '../../../Components/Input';
-import {Button} from "react-bootstrap";
-import FormGroup from "react-bootstrap/esm/FormGroup";
-import FormB from 'react-bootstrap/Form';
-const Form = () => {
+import Button from "react-bootstrap/Button";
+import { ipcRenderer } from 'electron';
+
+interface Props {
+  toggleModal: () => void;
+}
+
+const Form = (props: Props): JSX.Element => {
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -17,8 +21,10 @@ const Form = () => {
       description: Yup.string().trim(),
     }),
 
-    onSubmit: (values) => {
-      console.log('Project created', values);
+    onSubmit: async (values) => {
+      console.log(values);
+      const res = await ipcRenderer.sendSync('createProject', values);
+      if (res) props.toggleModal();
     },
   });
   return (

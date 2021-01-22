@@ -1,8 +1,9 @@
-import {app, BrowserWindow, ipcMain, IpcMainEvent} from 'electron';
+import { app, BrowserWindow, ipcMain, IpcMainEvent } from 'electron';
 declare const MAIN_WINDOW_WEBPACK_ENTRY: any;
-
+import db from './main/db/db';
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) {
+  // eslint-disable-line global-require
   app.quit();
 }
 
@@ -11,6 +12,9 @@ const createWindow = (): void => {
   const mainWindow = new BrowserWindow({
     height: 600,
     width: 800,
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
 
   // and load the index.html of the app.
@@ -44,6 +48,15 @@ app.on('activate', () => {
 // eslint-disable-next-line import/no-unresolved
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
-ipcMain.on('createProject', ((event: IpcMainEvent, args: any) => {
-  console.log(event, args, typeof args);
-}));
+ipcMain.on('createProject', (event: IpcMainEvent, args: any) => {
+  event.returnValue = true;
+  db.projects
+    .insert(args)
+    .then((res) => {
+      console.log('project added', res);
+    })
+    .catch((err) => {
+      console.log('errored', err);
+    });
+  event.returnValue = true;
+});

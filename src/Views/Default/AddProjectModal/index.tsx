@@ -11,7 +11,7 @@ const Index = ({ show, toggle }: props): JSX.Element => {
   return (
     <div>
       <Modal title={'Add your Project'} toggleModal={toggle} show={show}>
-        <Form />
+        <Form toggleModal={toggle} />
       </Modal>
     </div>
   );
