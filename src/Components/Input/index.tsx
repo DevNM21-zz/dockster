@@ -2,6 +2,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import FormGroup from 'react-bootstrap/FormGroup';
+import styled, { keyframes } from 'styled-components';
 
 interface Props {
   gridSize: number;
@@ -16,6 +17,31 @@ interface Props {
   placeholder?: string;
   className?: string;
 }
+
+const blink = keyframes`
+  0% {
+    caret-color: red;
+  }
+  20% {
+    caret-color: orange;
+  }
+  40% {
+    caret-color: yellow;
+  }
+  60% {
+    caret-color: green;
+  }
+  80% {
+    caret-color: blue;
+  }
+  100% {
+    caret-color: purple;
+  }
+`;
+
+const StyledInput = styled(Form.Control)`
+  animation: ${blink} 2s linear infinite;
+`;
 
 const Input = (props: Props): JSX.Element => {
   const inputProps = { ...props };
@@ -35,7 +61,7 @@ const Input = (props: Props): JSX.Element => {
           )}
           {props.label}
         </Form.Label>
-        <Form.Control {...inputProps} />
+        <StyledInput {...inputProps} />
         <span className="text-danger"> {props.error} </span>{' '}
       </FormGroup>
     </Col>
