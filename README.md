@@ -12,7 +12,8 @@ A project can be used to group containers, networks and volumes. Images are glob
 
 ## Roadmap
 
- - [ ] Create Projects
+ - [x] Create Projects - completed on 22/1
+ - [ ] List Projects
  - [ ] Edit Project Details
  - [ ] Delete Project
  - [ ] Ability to create an account with email and password
