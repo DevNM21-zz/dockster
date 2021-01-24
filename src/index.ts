@@ -1,6 +1,6 @@
-import { app, BrowserWindow, ipcMain, IpcMainEvent } from 'electron';
+import { app, BrowserWindow, ipcMain, IpcMainEvent, IpcMainInvokeEvent } from 'electron';
 declare const MAIN_WINDOW_WEBPACK_ENTRY: any;
-import db from './main/db/db';
+import Project from './main/db/Stores/project';
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   // eslint-disable-line global-require
@@ -50,13 +50,9 @@ app.on('activate', () => {
 // code. You can also put them in separate files and import them here.
 ipcMain.on('createProject', (event: IpcMainEvent, args: any) => {
   event.returnValue = true;
-  db.projects
-    .insert(args)
-    .then((res) => {
-      console.log('project added', res);
-    })
-    .catch((err) => {
-      console.log('errored', err);
-    });
-  event.returnValue = true;
+  Project.create(args).then(() => (event.returnValue = true));
+});
+
+ipcMain.handle('getAllProjects', async () => {
+  return Project.findAll();
 });
