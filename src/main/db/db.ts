@@ -7,7 +7,4 @@ const dbFactory = (fileName: string): Datastore =>
     autoload: true,
   });
 
-export default {
-  projects: dbFactory('projects.db'),
-  images: dbFactory('images.db'),
-};
+export default dbFactory;
