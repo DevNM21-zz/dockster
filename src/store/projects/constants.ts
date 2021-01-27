@@ -1,0 +1,5 @@
+export enum Constants {
+  SET_PROJECTS = 'SET_PROJECTS',
+  ADD_PROJECT = 'ADD_PROJECT',
+  REMOVE_PROJECT = 'REMOVE_PROJECT',
+}
