@@ -2,20 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { ProSidebar, Menu, MenuItem, SubMenu, SidebarHeader } from 'react-pro-sidebar';
 import 'react-pro-sidebar/dist/css/styles.css';
 import styled from 'styled-components';
-import { ipcRenderer } from 'electron';
+import { connect } from 'react-redux';
+import { IRootState } from '../../store/index'
 
 const Wrapper = styled.div`
   height: 100vh;
   position: fixed;
 `;
 
-const Index = (): JSX.Element => {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    ipcRenderer.invoke('getAllProjects', {}).then((projects: any) => {
-      setProjects(projects);
-    });
-  }, []);
+const Index = ({ projects }: { projects: IProject[] }): JSX.Element => {
   return (
     <>
       <Wrapper>
@@ -32,4 +27,6 @@ const Index = (): JSX.Element => {
   );
 };
 
-export default Index;
+const mapStateToProps = ({ projects }: IRootState) => ({ projects })
+
+export default connect(mapStateToProps)(Index);
