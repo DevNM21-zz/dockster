@@ -14,8 +14,10 @@ A project can be used to group containers, networks and volumes. Images are glob
 
  - [x] Create Projects - completed on 22/1
  - [x] List Projects - completed on 24/1 - 87e40a2c
+ - [ ] Build Project View
  - [ ] A place to search for docker images
  - [ ] To pull images
+ - [ ] View images
  - [ ] Create containers from images with options
  - [ ] Read logs of a container
  - [ ] Stop, or Delete Containers
@@ -33,8 +35,5 @@ A project can be used to group containers, networks and volumes. Images are glob
  - [ ] Login
  - [ ] Sync Projects with user account
 
-## Weekly Releases - Jan '20
 
-### Week 3 and 4 - Alpha 1.1:
-First 6 milestones of roadmap
     
