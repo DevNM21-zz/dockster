@@ -11,12 +11,6 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 const App = () => {
-  const dispatch = useDispatch();
-  React.useEffect(() => {
-    ipcRenderer.invoke('getAllProjects', {}).then((projects: any) => {
-      dispatch(setProjects(projects));
-    });
-  }, []);
   return (
     <>
       <Provider store={store}>
