@@ -3,9 +3,6 @@ import * as React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import AppLayout from './AppLayout';
 import DefaultView from './Views/Default';
-import { ipcRenderer } from 'electron';
-import { useDispatch } from 'react-redux';
-import { setProjects } from './store/projects/actions'
 
 import { Provider } from 'react-redux';
 import store from './store';

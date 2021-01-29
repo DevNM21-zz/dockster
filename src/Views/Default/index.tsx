@@ -1,24 +1,14 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import AddProjectModal from './AddProjectModal';
+import React from 'react';
+import { IRootState } from '../../store';
+import { connect, ConnectedProps } from 'react-redux';
+import AddProjectInfo from './AddProjectInfo';
 
-const Index = (): JSX.Element => {
-  const [showAddProjectModal, setAddProjectModalStatus] = useState(false);
-  const toggleModal = (): void => setAddProjectModalStatus(!showAddProjectModal);
+const mapStateToProps = ({ projects }: IRootState) => ({ projects });
+const connector = connect(mapStateToProps);
+type PropsFromRedux = ConnectedProps<typeof connector>;
 
-  return (
-    <>
-      <Container style={{ paddingTop: '40%' }} className={'justify-content-center text-center'}>
-        <h4>It looks so empty!</h4>
-        <p>Let&apos;s start by adding a project.</p>
-        <Button onClick={toggleModal} variant={'dark'}>
-          Add Project +
-        </Button>
-      </Container>
-      <AddProjectModal show={showAddProjectModal} toggle={toggleModal} />
-    </>
-  );
+const Index: React.FC<PropsFromRedux> = (props: PropsFromRedux) => {
+  return <>{props.projects.projects.length > 0 ? <div>Projects detected</div> : <AddProjectInfo />}</>;
 };
 
-export default Index;
+export default connector(Index);
