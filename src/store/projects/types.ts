@@ -19,4 +19,5 @@ export type ProjectDispatchType = (args: ProjectAction) => ProjectAction;
 
 export interface IProjectState {
   projects: IProject[];
+  selectedProject?: string;
 }

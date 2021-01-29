@@ -9,10 +9,12 @@ export const projectsReducer = (state: IProjectState = init, action: ProjectActi
   switch (action.type) {
     case Constants.SET_PROJECTS:
       return {
+        ...state,
         projects: state.projects.concat(action.payload.projects),
       };
     case Constants.ADD_PROJECT:
       return {
+        ...state,
         projects: state.projects.concat(action.payload.project),
       };
     default:
