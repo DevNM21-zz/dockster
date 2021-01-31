@@ -2,6 +2,7 @@ import React from 'react';
 import { IRootState } from '../../store';
 import { connect, ConnectedProps } from 'react-redux';
 import AddProjectInfo from './AddProjectInfo';
+import { useParams } from 'react-router-dom';
 
 const mapStateToProps = ({ projects }: IRootState) => ({ projects });
 const connector = connect(mapStateToProps);

@@ -12,13 +12,18 @@ const App = () => {
     <>
       <Provider store={store}>
         <HashRouter>
-          <AppLayout>
-            <Switch>
-              <Route path={'/'} exact>
+          <Switch>
+            <Route path={'/'} exact>
+              <AppLayout>
                 <DefaultView />
-              </Route>
-            </Switch>
-          </AppLayout>
+              </AppLayout>
+            </Route>
+            <Route path={'/:projectId'} exact>
+              <AppLayout>
+                <DefaultView />
+              </AppLayout>
+            </Route>
+          </Switch>
         </HashRouter>
       </Provider>
     </>
