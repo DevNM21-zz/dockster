@@ -6,6 +6,7 @@ import { connect, ConnectedProps, useDispatch } from 'react-redux';
 import { IRootState } from '../../store/index';
 import { ipcRenderer } from 'electron';
 import { setProjects } from '../../store/projects/actions';
+import { Link, useParams } from 'react-router-dom';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -17,6 +18,7 @@ const connector = connect(mapStateToProps);
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
 const Index: React.FC<PropsFromRedux> = (props: PropsFromRedux) => {
+  const { projectId }: { projectId: string } = useParams();
   const dispatch = useDispatch();
   React.useEffect(() => {
     ipcRenderer.invoke('getAllProjects', {}).then((projects: IProject[]) => {
@@ -31,7 +33,11 @@ const Index: React.FC<PropsFromRedux> = (props: PropsFromRedux) => {
           <Menu iconShape="square">
             <SubMenu title="Projects">
               {props.projects.projects.length > 0 &&
-                props.projects.projects.map((project) => <MenuItem  ><span onClick={() => console.log(project.name)} >{project.name}</span></MenuItem>)}
+                props.projects.projects.map((project) => (
+                  <MenuItem active={projectId === project._id} >
+                    <Link to={`/${project._id}`}>{project.name}</Link>
+                  </MenuItem>
+                ))}
             </SubMenu>
           </Menu>
         </ProSidebar>

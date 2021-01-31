@@ -3,3 +3,6 @@ body {
   margin: auto;
   background-color: whitesmoke;
 }
+.pro-sidebar .pro-menu .pro-menu-item.active {
+  background-color: royalblue;
+}
