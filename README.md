@@ -18,18 +18,20 @@ A project can be used to group containers, networks and volumes. Images are glob
  - [ ] A place to search for docker images
  - [ ] To pull images
  - [x] View images - completed on 4/2
+ - [x] List Containers - completed on 4/2
  - [ ] Create containers from images with options
  - [ ] Read logs of a container
  - [ ] Stop, or Delete Containers
  - [ ] Attach shell to containers
  - [ ] Create Docker networks
  - [ ] Move containers from one to other network
+ - [ ] List Networks
  - [ ] Delete Networks
  - [ ] Delete Images
  - [ ] Create Volumes
  - [ ] Attach Volumes
  - [ ] Destroy Volumes
- - [ ] Hot search, like in webstorm when Shift is pressed twice
+ - [ ] Hot search, like in webstorm when Shift is pressed twice (search through images, containers, networks)
  - [ ] Have an option that'll show all tags of an image with it in single card
  - [ ] Edit Project Details
  - [ ] Delete Project
