@@ -29,6 +29,8 @@ A project can be used to group containers, networks and volumes. Images are glob
  - [ ] Create Volumes
  - [ ] Attach Volumes
  - [ ] Destroy Volumes
+ - [ ] Hot search, like in webstorm when Shift is pressed twice
+ - [ ] Have an option that'll show all tags of an image with it in single card
  - [ ] Edit Project Details
  - [ ] Delete Project
  - [ ] Ability to create an account with email and password
