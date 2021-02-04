@@ -3,6 +3,7 @@ import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import TabContainer from 'react-bootstrap/TabContainer';
 import Images from './Images';
+import Containers from './Containers';
 
 interface Props {
   projectId: string;
@@ -17,8 +18,9 @@ const Index = ({ projectId }: Props) => {
           </TabContainer>
         </Tab>
         <Tab eventKey="Containers" title="Containers" key="2">
-          --- Containers ---
-        </Tab>
+          <TabContainer>
+            <Containers />
+          </TabContainer>        </Tab>
         <Tab eventKey="Networks" title="Networks" key="3">
           --- Networks ---
         </Tab>

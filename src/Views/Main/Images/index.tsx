@@ -20,6 +20,7 @@ const Images: React.FC = () => {
         {images.length > 0 ? (
           images.map((img) => (
             <ImageCard
+              key={img.Id}
               name={img.RepoTags[0].split(':')[0]}
               tags={img.RepoTags.map((r: string) => r.split(':')[1])}
               containers={img.Containers}
