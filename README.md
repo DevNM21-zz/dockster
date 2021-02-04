@@ -14,10 +14,10 @@ A project can be used to group containers, networks and volumes. Images are glob
 
  - [x] Create Projects - completed on 22/1
  - [x] List Projects - completed on 24/1 - 87e40a2c
- - [ ] Build Project View
+ - [x] Build Project View - completed on 4/2
  - [ ] A place to search for docker images
  - [ ] To pull images
- - [ ] View images
+ - [x] View images - completed on 4/2
  - [ ] Create containers from images with options
  - [ ] Read logs of a container
  - [ ] Stop, or Delete Containers
