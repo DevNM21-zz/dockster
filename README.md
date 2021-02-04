@@ -13,14 +13,11 @@ A project can be used to group containers, networks and volumes. Images are glob
 ## Roadmap
 
  - [x] Create Projects - completed on 22/1
- - [ ] List Projects
- - [ ] Edit Project Details
- - [ ] Delete Project
- - [ ] Ability to create an account with email and password
- - [ ] Login
- - [ ] Sync Projects with user account
+ - [x] List Projects - completed on 24/1 - 87e40a2c
+ - [ ] Build Project View
  - [ ] A place to search for docker images
  - [ ] To pull images
+ - [ ] View images
  - [ ] Create containers from images with options
  - [ ] Read logs of a container
  - [ ] Stop, or Delete Containers
@@ -32,9 +29,11 @@ A project can be used to group containers, networks and volumes. Images are glob
  - [ ] Create Volumes
  - [ ] Attach Volumes
  - [ ] Destroy Volumes
+ - [ ] Edit Project Details
+ - [ ] Delete Project
+ - [ ] Ability to create an account with email and password
+ - [ ] Login
+ - [ ] Sync Projects with user account
 
-## Weekly Releases - Jan '20
 
-### Week 3 and 4 - Alpha 1.1:
-First 6 milestones of roadmap
     
